@@ -12,7 +12,6 @@ class StringToNumberService
      */
     public function convert(string $string): int
     {
-        $hash = crc32($string);
-        return abs($hash);
+        return abs(crc32($string));
     }
 }
